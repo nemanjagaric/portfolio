@@ -1,0 +1,209 @@
+body {
+    font-family: 'Cinzel', serif;
+    margin: 0;
+    background: linear-gradient(to left, #007991, #78ffd6);
+    color: #0b2a62;
+}
+
+/*----------------header--------------------*/
+header {
+    background-color: #f8fff085;
+    height: 100px;
+}
+header h1 {
+    line-height: 100px;
+    margin: 0 20px;
+}
+.wrapper {
+    margin: 0 auto;
+    width: 960px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+nav a {
+    line-height: 100px;
+    padding: 34px;
+}
+
+nav a:link {
+    font-size: 25px;
+    text-decoration: none;
+}
+nav a:visited {
+    color: cadetblue;
+}
+nav a:hover {
+    color: black;
+    background-color: #50aaff70;
+    padding: 34px;
+    transition: 0.75s;
+}
+#mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+#mobile-nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    display: none;
+    background-color: #ffffffde;
+}
+#mobile-nav a {
+    display: block;
+    text-align: center;
+    margin: 154px 0;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: #0b2a62;
+    cursor: pointer;
+}
+
+/*-------main---------*/
+main {
+    height: 425px;
+    position: relative;
+}
+#artcl {
+    width: 250px;
+    text-align: center;
+    font-size: 22px;
+    color: #0b2a62;
+    padding: 20px;
+    background-color: #20585a59;
+    margin: 10px 0 10px 90px;
+    animation-name: oblak;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 5ms;
+    animation-iteration-count: infinite;
+    position: absolute;
+    top: 105px;
+    left: 250px;
+    cursor: pointer;
+}
+@keyframes oblak{
+    0% {
+        transform: translate(0, 0);
+        background-color: rgba(240, 255, 255, 0.342);
+    }
+    25% {
+        color: #0b296262;
+    }
+    50%{
+        border-radius: 20px;
+        color: azure;
+        transform: translate(25px, 0);
+    }
+    75% {
+        color: #2dc5ca59;
+    }
+    100%{
+        transform: translate(0, 0);
+        background-color:  rgba(240, 255, 255, 0.342);
+    }
+}
+#hiddenP {
+    display: none;
+    margin: 100px 0;
+}
+.backBtn {
+    font-family: 'Cinzel', serif;
+    background: #69c1a6bd;
+    color: #0b2a62;
+    padding: 15px;
+    left: 820px;
+    position: absolute;
+    top: 350px;
+    border-radius: 18px;
+    border-color: white;
+    cursor: pointer;
+    font-size: 17px;
+}
+.backBtn:hover {
+    color: white;
+    background-color: #0b2a6285;
+}
+#projects {
+    display: none;
+    text-align: center;
+    height: fit-content;
+}
+.grid-container {
+    display: grid;
+    grid-template-areas:
+      'projects projects'
+      'projects projects';
+    grid-gap: 10px;
+    padding: 10px;
+  }
+#contact {
+    display: none;
+    margin: 200px auto;
+}
+/*-----------footer------------*/
+footer {
+    height: 100px;
+    background-color: #f8fff085;
+    text-align: center;
+    line-height: 100px;
+}
+footer h3 {
+    margin: 0;
+}
+footer a {
+    color: #0b2a62;
+    font-size: 20px;
+}
+footer a:hover {
+    color: black;
+}
+@media (max-width: 575px){
+    nav {
+        display: none;
+    }
+    #artcl {
+        left: -88px;
+        top: 167px;
+        }
+    footer {
+        display: flex;
+        justify-content: space-between;
+    }
+    #hiddenP {
+        width: 100%;
+        text-align: center;
+    }
+    .backBtn {
+        left: 180px;
+        top: 500px;
+    }
+    main {
+        height: 602px;
+    }
+    .wrapper {
+        width: 320px;
+    }
+    #mobile-menu {
+        display: block;
+        line-height: 100px;
+        padding-right: 20px;
+        font-size: 30px;
+    }
+    #projects {
+        height: 470px;
+        width: 320px;
+    }
+    #projects img {
+        width: 250px;
+    }
+    #contact {
+        padding: 24px;
+    }
+
+}
